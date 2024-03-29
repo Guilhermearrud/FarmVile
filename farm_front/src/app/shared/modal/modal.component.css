@@ -1,0 +1,33 @@
+.modal-body {
+    height: 50vh;
+    width: 40vw;
+}
+
+.animals-row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .animal-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .animal-details {
+    padding: 5px;
+    width: 300px;
+  }
+  
+  .image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .image img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  

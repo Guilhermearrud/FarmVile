@@ -1,0 +1,69 @@
+/* styles.css or any other global CSS file */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the component takes up the full height of the viewport */
+}
+
+.main-container {
+  display: flex;
+  flex: 1; /* Fill remaining vertical space */
+}
+
+.content-container {
+  flex: 1; /* Fill remaining horizontal space */
+  display: flex;
+  flex-direction: column;
+}
+
+#first-container,
+#second-container {
+  flex: 1; /* Both containers have the same size and fill remaining vertical space */
+}
+
+#first-container {
+  background-color: #fff; /* White */
+  color: #333; /* Dark brown */
+  margin: 5px;
+  border: .5px solid #333; /* Dark brown */
+}
+
+#second-container {
+  background-color: #d3d3d3; /* Light grey */
+  color: #333; /* Dark brown */
+  margin: 5px;
+  border: .5px solid #333; /* Dark brown */
+}
+
+
+#first-container-text {
+  background-color: rgb(194, 188, 188);
+  width: 15%;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  margin-left: 8px;
+  border: .5px solid #333;
+}
+
+#first-container-box {
+  flex: 1; /* Fill remaining horizontal space */
+  display: flex;
+  flex-direction: row;
+}
+
+#infomartion-container {
+  width: 50%;
+  height: 230px;
+  margin: 8px;
+}
+
+#image-container {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  margin: 8px;
+  background-image: url("https://static.wikia.nocookie.net/hmwikia/images/7/75/Cowbtn.gif/revision/latest?cb=20120430011917");
+}
+
+/* Add additional styling as needed */

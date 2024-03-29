@@ -1,0 +1,40 @@
+<div class="modal-body">
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 *ngIf="data.animals">{{ data.animals.name }} Details</h2>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="data.animals" class="animals-row">
+            <div class="animal-container">
+              <div class="animal-details">
+                <h2>Name: {{ data.animals.name }}</h2>
+                <p>Type: {{ data.animals.type }}</p>
+                <p>
+                  Birthday: {{ data.animals.birthDate | date : "yyyy/MM/dd" }}
+                </p>
+                <p *ngIf="data.animals.deathDate">
+                  Deathday: {{ data.animals.deathDate | date : "yyyy/MM/dd" }}
+                </p>
+                <p>Status: {{ data.animals.status }}</p>
+                <p>Description: {{ data.animals.description }}</p>
+                <div class="select-container">
+                  <label for="status">Select Status:</label>
+                  <select id="status" [(ngModel)]="selectedStatus" name="status" class="status-select" (change)="changeStatus(selectedStatus)">
+                    <option id="option" *ngFor="let status of statusOptions" [value]="status">{{ status }}</option>
+                  </select>
+                </div>
+                <div class="button-container">
+                  <button class="change-status-btn" (click)="changeAnimalStatus()">Change Status</button>
+                </div>
+              </div>
+              <div class="image">
+                <img [src]="data.animals.pictureUrl" alt="animal.name" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

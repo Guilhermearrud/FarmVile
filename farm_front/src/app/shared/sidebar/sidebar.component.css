@@ -1,0 +1,24 @@
+.example-container {
+  width: 200px;
+  height: 100%;
+  background-color: #f0f0f0; /* Light grey */
+  color: #333; /* Dark brown */
+  display: flex;
+  flex-direction: column; /* Change to column */
+}
+
+.menu {
+  padding: 10px;
+  background-color: #84ea51; /* Light green */
+  color: #333; /* Dark brown */
+  border: 1px solid #333; /* Dark brown */
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #d3d3d3; /* Light grey */
+}

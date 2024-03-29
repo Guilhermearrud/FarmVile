@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto
+}
+
+.mat-toolbar {
+    background-color: #b8d9a8; /* Light green */
+    color: #333; /* Dark brown */
+    height: 60px;
+}

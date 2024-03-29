@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="main-container">
+  <app-sidebar></app-sidebar>
+  <div class="content-container">
+    <div id="first-container">
+      <h1> Use these buttons to change the Type of Animals you want to check: </h1>
+      <div id="buttons-container" class="buttons-container">
+      <button (click)="changeAnimalType('Pet')">Pet</button>
+      <button (click)="changeAnimalType('LiveStock')">Livestock</button>
+      <button (click)="changeAnimalType('Bird')">Birds</button>
+    </div>
+    </div>
+    <div class="animal-main-container" >
+      <div
+        class="animal-container"
+        *ngFor="
+          let animal of selectedAnimals
+            | paginate : { itemsPerPage: 2, currentPage: page }
+        " (click)="openAnimalModal(animal)"
+      >
+        <div class="animal-details">
+          <p><b>Name:</b> {{ animal.name }}</p>
+          <p><b>Type:</b>  {{ animal.type }}</p>
+          <p><b>Status:</b>  {{ animal.status }}</p>
+        </div>
+        <div class="animal-image">
+          <img [src]="animal.pictureUrl" />
+        </div>
+      </div>
+    </div>
+
+    <div class="pagination">
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+    </div>
+  </div>
+</div>

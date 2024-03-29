@@ -1,0 +1,21 @@
+<!-- app.component.html -->
+<app-header></app-header>
+<div class="main-container">
+  <app-sidebar></app-sidebar>
+  <div class="content-container">
+    <div class="animals-row">
+      <div *ngFor="let animal of allAnimals | paginate: { itemsPerPage: 4, currentPage: page }" class="animal-container" (click)="openAnimalModal(animal)">
+        <div class="animal-details">
+          <h2>{{ animal.name }}</h2>
+          <p>{{ animal.type }}</p>
+        </div>
+        <div class="animal-image">
+          <img [src]="animal.pictureUrl" alt="animal.name" />
+        </div>
+      </div>
+      <div class="pagination">
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>
